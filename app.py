@@ -4,6 +4,9 @@ from flask import Flask
 from flask_migrate import Migrate
 from models import db
 from config import Config  # <-- notice this is now from config import Config
+from models import db, Guest, Episode, Appearance
+from flask import Flask, request, jsonify
+
 
 app = Flask(__name__)
 app.config.from_object(Config)  # <-- and this uses the Config class
